@@ -1,13 +1,12 @@
 /*
 ============================================
 ; Title:  session-api.js
-; Author:   Professor Krasso
-; Date: 1-22-2021
-; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Author: Professor Krasso
+; Date:   16 January 2021
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
 ; Description: APIs for managing Session Users
 ;===========================================
 */
-
 
 // require statements
 const express = require('express');
@@ -33,8 +32,7 @@ router.post('/signin', function (req, res, next) {
        * IF the user is an existing customer
        */
       if (user) {
-
-        let passwordIsValid = bcrypt.compareSync(req.body.password, user.password); // compare the saved hashed password against the signin password
+        let passwordIsValid = bcrypt.compareSync(req.body.password, req.user.password); // compare the saved hashed password against the signin password
 
         if (passwordIsValid) {
           /**

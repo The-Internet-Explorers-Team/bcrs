@@ -1,13 +1,12 @@
 /*
 ============================================
-; Title:  user-api.js
+; Title:  security-question-list.component.ts
 ; Author: Professor Krasso
-; Date:  1-22-21
-; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: App module
+; Date:   17 January 2021
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Description: Base Routing
 ;===========================================
 */
-
 
 import {Routes} from '@angular/router';
 import {BaseLayoutComponent} from './shared/base-layout/base-layout.component';
@@ -20,14 +19,13 @@ import {SecurityQuestionDetailsComponent} from './pages/security-question-detail
 import {SecurityQuestionCreateComponent} from './pages/security-question-create/security-question-create.component';
 import {AuthLayoutComponent} from './shared/auth-layout/auth-layout.component';
 import {SigninComponent} from './pages/signin/signin.component';
-import {RegisterComponent} from './pages/register/register.component';
-import {VerifyUsernameFormComponent} from './pages/verify-username-form/verify-username-form.component';
-import {VerifySecurityQuestionsFormComponent} from './pages/verify-security-questions-form/verify-security-questions-form.component';
-import {ResetPasswordFormComponent} from './pages/reset-password-form/reset-password-form.component';
-import {NotFoundComponent} from './pages/not-found/not-found.component';
-import {ErrorComponent} from './pages/error/error.component';
-import {ContactComponent} from './pages/contact/contact.component';
-import {AboutComponent} from './pages/about/about.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { VerifyUsernameFormComponent } from './pages/verify-username-form/verify-username-form.component';
+import { ErrorComponent } from './pages/error/error.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { VerifySecurityQuestionsComponent } from './pages/verify-security-questions/verify-security-questions.component';
 
 export const AppRoutes: Routes = [
   {
@@ -44,7 +42,7 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'about',
-        component: AboutComponent
+        component: ContactComponent
       },
       {
         path: 'users',
@@ -91,11 +89,11 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'verify-security-questions',
-        component: VerifySecurityQuestionsFormComponent
+        component: VerifySecurityQuestionsComponent
       },
       {
         path: 'reset-password',
-        component: ResetPasswordFormComponent
+        component: ResetPasswordComponent
       },
       {
         path: '404',
