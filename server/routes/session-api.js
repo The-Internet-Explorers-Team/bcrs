@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  session-api.js
+; Author: Professor Krasso
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Date:   January 13, 2021
+; Description: Api's for the session
+===========================================
+*/
+
 // require statements
 const express = require('express');
 const User = require('../db-models/user');
@@ -11,20 +21,17 @@ const saltRounds = 10; // default salt rounds for hashing algorithm
  * User sign-in
  */
 router.post('/signin', function (req, res, next) {
-
   User.findOne({'username': req.body.username}, function (err, user) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
       console.log(user);
-
       /**
        * IF the user is an existing customer
        */
       if (user) {
-        let passwordIsValid = bcrypt.compareSync(req.body.password, req.user.password); // compare the saved hashed password against the signin password
-
+        let passwordIsValid = bcrypt.compareSync(req.body.password, user.password); /// compare the saved hashed password against the signin password
         if (passwordIsValid) {
           /**
            * IF the password is valid
@@ -52,7 +59,6 @@ router.post('/signin', function (req, res, next) {
          * Invalid username
          */
         console.log(`Username: ${req.body.username} has not been registered with out system.`);
-
         res.status(401).send({
           type: 'error',
           text: `Invalid username and/or password, please try again`,
@@ -210,4 +216,5 @@ router.post('/users/:username/reset-password', function (req, res, next) {
   })
 });
 
+//exports
 module.exports = router;

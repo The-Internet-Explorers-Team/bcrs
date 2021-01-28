@@ -3,7 +3,7 @@
 ; Author: Professor Krasso
 ; Date:   23 January 2021
 ; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: About page
+; Description: About page.ts
 ;===========================================
 */
 

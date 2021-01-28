@@ -30,7 +30,7 @@
       </mat-card-subtitle>
 
       <mat-card-content>
-        <!-- if there is an error message -->
+        <!-- if there is an error message info -->
         <small style="color: #df546a;" *ngIf="errorMessage">{{ errorMessage }}<br/></small>
         <mat-card class="mat-elevation-z0">
           <form [formGroup]="form" (ngSubmit)="signin(); form.reset()" #loginForm="ngForm">

@@ -18,16 +18,14 @@ const bcrypt = require('bcrypt');
  Returns: User File
 */
 
-router.get('/api/users/:userId', function(req, res, next) {
-  //finds one user using the Id provided and returns the user file
-  User.findOne({'userId': req.params.userId},
-  function(err, User){
-    if(err) {
+router.get('/:id', function (req, res, next) {
+  User.findOne({'_id': req.params.id}, function (err, user) {
+    if (err) {
       console.log(err);
       return next(err);
-    } else{
-      console.log(User);
-      res.json(User);
+    } else {
+      console.log(user);
+      res.json(user);
     }
   })
 });
@@ -147,5 +145,5 @@ router.get('/:username/security-questions', function (req, res, next) {
   })
 });
 
-//exports the APIs to the router module
+//exports the APIs to the router module!
 module.exports = router;

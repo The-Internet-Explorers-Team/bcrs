@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  user-delete-dialog.component.ts
+; Title:  homeComponent.ts
 ; Author: Professor Krasso
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major

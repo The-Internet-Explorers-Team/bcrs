@@ -16,4 +16,5 @@ let securityQuestionSchema = mongoose.Schema({
   isDisabled: {type: Boolean, default: false}
 });
 
-module.exports = mongoose.model('SecurityQuestion', securityQuestionSchema);
+//exports
+module.exports = mongoose.model('SecurityQuestion', securityQuestionSchema); 
