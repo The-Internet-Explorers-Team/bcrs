@@ -9,7 +9,7 @@
 */
 
 /**
- * Require statements
+ * Require statements!
  */
 const express = require('express');
 const http = require('http');
@@ -18,9 +18,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 
-/**
- * Routing files
- */
+//Routing
 const UserApi = require('./routes/user-api');
 const SessionApi = require('./routes/session-api');
 const SecurityQuestionApi = require('./routes/security-question-api');
@@ -38,9 +36,9 @@ app.use('/', express.static(path.join(__dirname, '../dist/bcrs')));
 /**
  * Variables
  */
-const port = process.env.PORT || 3000; // server port
+const port = 3000; // server port
 
-// TODO: This line will need to be replaced with your actual database connection string
+//connection string to MongoDB
 const conn = 'mongodb+srv://admin:admin@bobs-computer-repair.7wtf8.mongodb.net/users?retryWrites=true&w=majority';
 
 /**
@@ -49,8 +47,7 @@ const conn = 'mongodb+srv://admin:admin@bobs-computer-repair.7wtf8.mongodb.net/u
 mongoose.connect(conn, {
   promiseLibrary: require('bluebird'),
   useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useCreateIndex: true
+  useNewUrlParser: true
 }).then(() => {
   console.debug(`Connection to the database instance was successful`);
 }).catch(err => {

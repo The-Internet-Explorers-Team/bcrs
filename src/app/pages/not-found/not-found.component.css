@@ -1,0 +1,11 @@
+.notFound{
+    margin: center;
+    height: 300px;
+    margin-left: 250px;
+}
+
+mat-card-subtitle {
+    font-size: 20px;
+    color: purple;
+    font-weight: 500;
+}

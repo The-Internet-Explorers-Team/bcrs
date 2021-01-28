@@ -8,6 +8,7 @@
 ;===========================================
 */
 
+
 // require statements
 const express = require('express');
 const SecurityQuestion = require('../db-models/security-question');
@@ -18,14 +19,14 @@ const router = express.Router();
 /**
  * FindAll
  */
-router.get('/api/security-questions', function (req, res, next) {
-  SecurityQuestion.find({}).where('isDisabled').equals(false).exec(function(err, SecurityQuestion) {
+router.get('/', function (req, res, next) {
+  SecurityQuestion.find({}).where('isDisabled').equals(false).exec(function(err, securityQuestions) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
-      console.log(SecurityQuestion);
-      res.json(SecurityQuestion);
+      console.log(securityQuestions);
+      res.json(securityQuestions);
     }
   })
 });
@@ -53,7 +54,7 @@ router.post('/', function (req, res, next) {
     text: req.body.text
   };
 
-  securityQuestion.create(sq, function (err, securityQuestion) {
+  SecurityQuestion.create(sq, function (err, securityQuestion) {
     if (err) {
       console.log(err);
       return next(err);
@@ -148,4 +149,5 @@ router.post('/find-by-ids', function (req, res, next) {
   })
 });
 
+//exports
 module.exports = router;

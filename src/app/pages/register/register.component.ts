@@ -1,3 +1,13 @@
+/*
+;===========================================
+; Title:  register.component.ts
+; Author: Professor Krasso
+; Date:   17 January 2021
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Description: Register page!!
+;===========================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';

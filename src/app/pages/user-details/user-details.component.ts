@@ -1,13 +1,12 @@
 /*
 ============================================
-; Title:  security-question-list.component.ts
+; Title:  user-details.component.ts
 ; Author: Professor Krasso
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
 ; Description: user-detail component 
 ;===========================================
 */
-
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';

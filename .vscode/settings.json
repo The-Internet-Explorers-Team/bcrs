@@ -2,8 +2,11 @@
     "cSpell.words": [
         "BCRS",
         "Krasso",
+        "buechle",
         "firstname",
         "lastname",
-        "nodebucket"
-    ]
+        "nodebucket",
+        "sessionuser"
+    ],
+    "cSpell.ignoreWords": []
 }

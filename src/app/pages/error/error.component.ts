@@ -3,7 +3,7 @@
 ; Title:  error.component.ts
 ; Author: Professor Krasso
 ; Date:   3 December 2019
-; Description: 500 error page
+; Description: 500 error page!
 ;===========================================
 */
 

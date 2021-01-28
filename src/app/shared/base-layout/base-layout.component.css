@@ -1,4 +1,4 @@
-.logoImg{
+.logoImg {
   width: 150px;
   height: 150px;
   float: left;
@@ -6,7 +6,7 @@
   padding-top: 15px;
 }
 
-.title{
+.title {
   font-size: 36px;
   margin-left: 80px;
   padding-top: 40px;
@@ -15,7 +15,7 @@
   padding-bottom: 40px;
 }
 
-.header{
+.header {
   width: 101%;
   height: 175px;
   background-color: rgb(64, 121, 140);
@@ -23,7 +23,10 @@
   margin-top: -15px;
 }
 
-.home, .about{
+.home,
+.about,
+.contact,
+.signin {
   margin-top: 75px;
   margin-left: 20px;
   padding-left: 20px;
@@ -36,7 +39,7 @@
   padding-left: 175%;
 }
 
-.manage{
+.manage {
   padding-left: 30px;
   -top: 50px;
   color: white;
@@ -44,32 +47,32 @@
   font-size: 20px;
 }
 
-  .main-content {
-    padding-left: 30px;
-  }
+.main-content {
+  padding-left: 30px;
+}
 
 .footer {
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    background-color: rgb(64, 121, 140) !important;
-    height: 60px;
-    margin-left: -10px;
-    margin-bottom: -15px;
-    }
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(64, 121, 140) !important;
+  height: 60px;
+  margin-left: -10px;
+  margin-bottom: -15px;
+}
 
-  .footer-content {
-    font-size: 16px;
-    padding-left: 100px;
-    letter-spacing: 3px;
-    color: white;
-  }
+.footer-content {
+  font-size: 16px;
+  padding-left: 100px;
+  letter-spacing: 3px;
+  color: white;
+}
 
-  .bu-link {
-    text-decoration: none;
-    color: white;
-  }
+.bu-link {
+  text-decoration: none;
+  color: white;
+}
 
-  .bu-link:hover {
-    text-decoration: underline;
-  }
+.bu-link:hover {
+  text-decoration: underline;
+}

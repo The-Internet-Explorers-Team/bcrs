@@ -1,10 +1,9 @@
 /*
-============================================
-; Title:  user-api.js
+; Title:  about.component.ts
 ; Author: Professor Krasso
-; Date:  1-22-21
+; Date:   23 January 2021
 ; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: About page
+; Description: About page.ts
 ;===========================================
 */
 
@@ -19,7 +18,7 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

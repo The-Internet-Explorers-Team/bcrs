@@ -11,7 +11,7 @@
 //this section is the requirements for mongoose and security question schema
 const mongoose = require('mongoose');
 
-//security questions go here
+//security questions go here!
 let securityQuestions = mongoose.Schema({
   questionId:   {type: String},
   answer:       {type: String}
@@ -19,7 +19,7 @@ let securityQuestions = mongoose.Schema({
 
 //set up user schema
 let userSchema = mongoose.Schema({
-  userId: {type: String, required: true, unique: true},
+
   username: {type: String, required: true, unique: true, dropDups: true},
   password: {type: String, required: true},
   firstname: {type: String},
@@ -36,3 +36,4 @@ let userSchema = mongoose.Schema({
 
 //exports schema to MongoDB
 module.exports = mongoose.model('User', userSchema);
+
