@@ -83,7 +83,8 @@ router.put('/:id', function(req, res, next){
         phoneNumber: req.body.phoneNumber,
         address: req.body.address,
         email: req.body.email,
-        date_modified: new Date()
+        date_modified: new Date(),
+        role: req.body.role
       });
       //saves the information and returns the file
       user.save(function(err, savedUser){
@@ -162,6 +163,22 @@ router.get('/:username/security-questions', function (req, res, next) {
     }
   })
 });
+
+/**
+ * API: Find User role
+ * Returns: Assigned user role
+*/
+router.get('/:username/role', function (req, res, next){
+  User.findOne({'username': req.params.username}, function(err, User){
+    if(err){
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(User);
+      res.json(User.role)
+    }
+  })
+})
 
 //exports the APIs to the router module
 module.exports = router;
