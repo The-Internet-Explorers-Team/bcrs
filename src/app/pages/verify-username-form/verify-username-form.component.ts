@@ -5,10 +5,14 @@
 <<<<<<< HEAD
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+<<<<<<< HEAD
 =======
 ; Date:   3 December 2019
 >>>>>>> origin
 ; Description: Verify username form
+=======
+; Description: Verify username form!
+>>>>>>> e517f00a2d6e089d2d4f728c10528c6c6cc7e082
 ;===========================================
 */
 

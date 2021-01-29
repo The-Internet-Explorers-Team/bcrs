@@ -3,7 +3,7 @@
 ; Title:  contact.component.ts
 ; Author: Professor Krasso
 ; Date:   3 December 2019
-; Description: Contact page
+; Description: Contact page.ts
 ;===========================================
 */
 

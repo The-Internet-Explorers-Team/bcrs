@@ -13,6 +13,23 @@ const User = require('../db-models/user');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 
+/*
+ API: FindUserById API
+ Returns: User File
+*/
+
+router.get('/:id', function (req, res, next) {
+  User.findOne({'_id': req.params.id}, function (err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+});
+
 /**
  * API: FindAllUsers API
  * Returns: Array of users

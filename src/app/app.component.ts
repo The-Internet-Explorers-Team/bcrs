@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  security-question-list.component.ts
+; Title:  app.component 
 ; Author: Professor Krasso
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major

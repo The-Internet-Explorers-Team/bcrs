@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  verify-security-question.ts
+; Author: Professor Krasso
+; Date:   17 January 2021
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Description: verify-security-question
+;===========================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

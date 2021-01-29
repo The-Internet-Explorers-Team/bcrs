@@ -29,30 +29,29 @@
           username/password to proceed
         </mat-card-subtitle>
 
-        <mat-card-content>
-          <!-- if there is an error message -->
-          <small style="color: #df546a;" *ngIf="errorMessage">{{ errorMessage }}<br/></small>
-          <mat-card class="mat-elevation-z0">
-            <form [formGroup]="form" (ngSubmit)="signin(); form.reset()" #loginForm="ngForm">
-              <mat-card-content fxLayout="column" fxLayoutGap="10px">
-                <mat-form-field>
-                  <input type="text" matInput fxFlex [formControl]="form.controls['username']"
-                         placeholder="User name"/>
-                </mat-form-field>
-                <mat-form-field>
-                  <input type="password" matInput fxFlex [formControl]="form.controls['password']"
-                         placeholder="Password"/>
-                </mat-form-field>
-              </mat-card-content>
-              <mat-card-actions>
-                <button type="submit" fxFlex mat-raised-button color="accent">Submit</button>
-              </mat-card-actions>
-              <br/>
-              <a fxLayoutAlign="end" class="forgot-password-link" routerLink="/">Forgot
-                password?</a>
-            </form>
-          </mat-card>
-        </mat-card-content>
-      </mat-card>
-    </div>
+      <mat-card-content>
+        <!-- if there is an error message info -->
+        <small style="color: #df546a;" *ngIf="errorMessage">{{ errorMessage }}<br/></small>
+        <mat-card class="mat-elevation-z0">
+          <form [formGroup]="form" (ngSubmit)="signin(); form.reset()" #loginForm="ngForm">
+            <mat-card-content fxLayout="column" fxLayoutGap="10px">
+              <mat-form-field>
+                <input type="text" matInput fxFlex [formControl]="form.controls['username']"
+                       placeholder="User name"/>
+              </mat-form-field>
+              <mat-form-field>
+                <input type="password" matInput fxFlex [formControl]="form.controls['password']"
+                       placeholder="Password"/>
+              </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+              <button type="submit" fxFlex mat-raised-button color="accent">Submit</button>
+            </mat-card-actions>
+            <br/>
+            <a fxLayoutAlign="end" class="forgot-password-link" routerLink="/session/forgot">Forgot
+              password?</a>
+          </form>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
   </div>

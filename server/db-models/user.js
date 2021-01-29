@@ -35,3 +35,4 @@ let userSchema = mongoose.Schema({
 
 //exports schema to MongoDB
 module.exports = mongoose.model('User', userSchema);
+
