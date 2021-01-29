@@ -2,8 +2,12 @@
 ============================================
 ; Title:  verify-username-form.component.ts
 ; Author: Professor Krasso
+<<<<<<< HEAD
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+=======
+; Date:   3 December 2019
+>>>>>>> origin
 ; Description: Verify username form
 ;===========================================
 */

@@ -1,9 +1,9 @@
 /*
 ============================================
-; Title:  about.component.ts
+; Title:  user-api.js
 ; Author: Professor Krasso
-; Date:   17 January 2021
-; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Date:  1-22-21
+; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
 ; Description: About page
 ;===========================================
 */

@@ -8,10 +8,10 @@
 ;===========================================
 */
 
-//this section is the requirements for mongoose and security question schema
+//this section is the requirements for mongoose
 const mongoose = require('mongoose');
 
-//security questions go here
+//security questions Schema
 let securityQuestions = mongoose.Schema({
   questionId:   {type: String},
   answer:       {type: String}
@@ -19,7 +19,6 @@ let securityQuestions = mongoose.Schema({
 
 //set up user schema
 let userSchema = mongoose.Schema({
-  userId: {type: String, required: true, unique: true},
   username: {type: String, required: true, unique: true, dropDups: true},
   password: {type: String, required: true},
   firstname: {type: String},

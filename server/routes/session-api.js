@@ -1,13 +1,3 @@
-/*
-============================================
-; Title:  session-api.js
-; Author: Professor Krasso
-; Date:   16 January 2021
-; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: APIs for managing Session Users
-;===========================================
-*/
-
 // require statements
 const express = require('express');
 const User = require('../db-models/user');
@@ -22,18 +12,20 @@ const saltRounds = 10; // default salt rounds for hashing algorithm
  */
 router.post('/signin', function (req, res, next) {
 
-  User.findOne({'username': req.body.username}, function (err, user) {
+  User.findOne({'username': req.body.username}, function (err, User) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
-      console.log(user);
+      console.log(User);
 
+      console.log(req.body.password);
+      console.log(User.password)
       /**
        * IF the user is an existing customer
        */
-      if (user) {
-        let passwordIsValid = bcrypt.compareSync(req.body.password, req.user.password); // compare the saved hashed password against the signin password
+      if (User) {
+        let passwordIsValid = bcrypt.compareSync(req.body.password, User.password); /// compare the saved hashed password against the signin password
 
         if (passwordIsValid) {
           /**
@@ -42,7 +34,7 @@ router.post('/signin', function (req, res, next) {
           res.status(200).send({
             type: 'success',
             auth: true,
-            username: user.username,
+            username: User.username,
             time_stamp: new Date()
           })
         } else {
@@ -88,10 +80,9 @@ router.post('/register', function(req, res, next){
       //if the user doesn't already exist, create new user
       if (!user) {
         //sets up hashed passwords using bcrypt
-        const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
         //sets up user file fields
-        const newUser = new User({
-          userId: req.body.userId,
+        let registering = {
           username: req.body.username,
           password: hashedPassword,
           firstname: req.body.firstname,
@@ -100,19 +91,20 @@ router.post('/register', function(req, res, next){
           address: req.body.address,
           securityQuestions: req.body.securityQuestions,
           email: req.body.email,
-          isDisabled: false,
-          role: req.body.role,
-          date_created: new Date(),
-          date_modified: ""
-        });
+        };
         //save new User
-        newUser.create(function(err, newUser){
+        User.create(registering, function(err, newUser){
           if(err){
             console.log(err);
             return next(err);
           } else {
             console.log(newUser);
-            res.json(newUser);
+            res.status(200).send({
+              type: 'success',
+              auth: true,
+              username: newUser.username,
+              time_stamp: new Date()
+            })
           }
         });
       } else {
@@ -125,6 +117,7 @@ router.post('/register', function(req, res, next){
       }
     }
 })});
+
 
 /**
  * API: Verify User
@@ -143,7 +136,6 @@ router.get('/verify/users/:username', function(req, res, next){
     }
   })
 });
-
 
 /**
  * VerifySecurityQuestions
