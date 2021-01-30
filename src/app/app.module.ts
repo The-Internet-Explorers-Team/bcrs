@@ -51,6 +51,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { RoleCreateComponent } from './pages/role-create/role-create.component';
+import { RoleDetailsComponent } from './pages/role-details/role-details.component';
+import { RoleListComponent } from './pages/role-list/role-list.component';
+import { RoleDeleteDialogComponent } from './dialogs/role-delete-dialog/role-delete-dialog.component';
 
 
 @NgModule({
@@ -74,7 +78,11 @@ import { ContactComponent } from './pages/contact/contact.component';
     NotFoundComponent,
     ErrorComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    RoleCreateComponent,
+    RoleDetailsComponent,
+    RoleListComponent,
+    RoleDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
