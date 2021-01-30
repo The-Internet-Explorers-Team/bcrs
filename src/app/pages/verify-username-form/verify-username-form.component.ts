@@ -37,7 +37,7 @@ export class VerifyUsernameFormComponent implements OnInit {
       username: [null, Validators.compose([Validators.required])]
     });
   }
-
+//make sure the user name is a valid one in the DB 
   validateUsername() {
     const username = this.form.controls['username'].value;
 
