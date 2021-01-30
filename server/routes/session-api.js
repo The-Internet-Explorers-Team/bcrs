@@ -39,7 +39,7 @@ router.post('/signin', function (req, res, next) {
           res.status(200).send({
             type: 'success',
             auth: true,
-            username: user.username,
+            username: User.username,
             time_stamp: new Date()
           })
         } else {
@@ -84,10 +84,9 @@ router.post('/register', function(req, res, next){
       //if the user doesn't already exist, create new user
       if (!user) {
         //sets up hashed passwords using bcrypt
-        const hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
         //sets up user file fields
-        const newUser = new User({
-
+        let registering = {
           username: req.body.username,
           password: hashedPassword,
           firstname: req.body.firstname,
@@ -96,18 +95,20 @@ router.post('/register', function(req, res, next){
           address: req.body.address,
           securityQuestions: req.body.securityQuestions,
           email: req.body.email,
-          isDisabled: false,
-          role: req.body.role,
-          date_created: new Date(),
-        });
+        };
         //save new User
-        User.create(newUser, function(err, newUser){
+        User.create(registering, function(err, newUser){
           if(err){
             console.log(err);
             return next(err);
           } else {
             console.log(newUser);
-            res.json(newUser);
+            res.status(200).send({
+              type: 'success',
+              auth: true,
+              username: newUser.username,
+              time_stamp: new Date()
+            })
           }
         });
       } else {

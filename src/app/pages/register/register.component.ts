@@ -93,7 +93,7 @@ export class RegisterComponent implements OnInit {
       if(res['auth']) {
         this.cookieService.set('isAuthenticated','true', 1);
         this.cookieService.set('username', credentials.username, 1);
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       } else {
         this.errorMessage = res['text'];
       }

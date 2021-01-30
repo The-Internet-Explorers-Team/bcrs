@@ -48,7 +48,7 @@ export const AppRoutes: Routes = [
         component: AboutComponent
       },
       {
-        path: 'users',
+        path: 'user-list',
         component: UserListComponent,
         canActivate: [SessionGuard]
       },

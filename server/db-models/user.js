@@ -8,10 +8,10 @@
 ;===========================================
 */
 
-//this section is the requirements for mongoose and security question schema
+//this section is the requirements for mongoose
 const mongoose = require('mongoose');
 
-//security questions go here!
+//security questions Schema
 let securityQuestions = mongoose.Schema({
   questionId:   {type: String},
   answer:       {type: String}

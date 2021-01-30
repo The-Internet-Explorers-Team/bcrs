@@ -18,3 +18,4 @@ let roleSchema = mongoose.Schema({
 
 //exports the schema for use in the application
 module.exports = mongoose.model('Role', roleSchema);
+
