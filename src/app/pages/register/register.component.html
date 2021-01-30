@@ -1,8 +1,9 @@
+
 <!--Registration Form-->
 <div class = "register">
   <mat-card class = "mat-elevation-z8">
+    <br />  <br />  <br />   <br />
     <mat-card-title>User Registration</mat-card-title>
-
     <mat-card *ngIf = "errorMessage" class = "mat-elevation=z0">
       <mat-card-content>
         <div class = "msg-err">
@@ -15,7 +16,7 @@
         <mat-card-content formGroupName = "contactInfo" class = "form">
 
           <mat-form-field appearance = "outline">
-            <mat-label>First Name</mat-label>
+            <mat-label class="name">First Name</mat-label>
             <input matInput formControlName = "firstname" placeholder = "First Name">
           </mat-form-field>
 
@@ -56,7 +57,7 @@
           </mat-form-field>
           -->
         </mat-card-content>
-
+        
         <mat-card-content formGroupName = "securityQuestions">
           <mat-form-field appearance = "outline">
               <mat-label>Select Security Question</mat-label>
@@ -95,8 +96,10 @@
             </mat-form-field>
 
         </mat-card-content>
-        <button class = "submit" mat-button (click) = "register(registrationForm.value)" type = "submit" [disabled]="!registrationForm.valid" >Submit</button>
-        <button routerLink = "/">Cancel</button>
+        <div id="container">
+        <button class="submit" mat-button (click) = "register(registrationForm.value)" type = "submit" [disabled]="!registrationForm.valid"  id="button1" >Submit</button>
+        <button class="cancel" routerLink = "/" mat-button id="button2">Cancel</button>
+        </div>
       </form>
 
   </mat-card>

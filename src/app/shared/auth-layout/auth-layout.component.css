@@ -1,0 +1,19 @@
+.top-divider{
+    background-color: rgb(11,32,39);
+    height: 60%;
+    margin-top: -60%;
+    z-index: 0;
+  }
+  
+  .bottom-divider{
+    background-color: rgb(112, 169, 161);
+    height: 65%;
+    z-index: 0;
+  }
+  
+  img{
+    margin-left: 40%;
+    padding-bottom: 2%;
+    z-index: 1;
+    margin-top: 15%;
+  }

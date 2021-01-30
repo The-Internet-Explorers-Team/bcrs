@@ -1,5 +1,5 @@
 <!--toolbar-->
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row></mat-toolbar-row>
   <mat-toolbar-row></mat-toolbar-row>
   <mat-toolbar-row>
@@ -33,7 +33,8 @@
 
           <br/><br/>
           <div fxFlex fxLayoutAlign="end">
-            <button mat-raised-button color="accent">Submit</button>
+            <button mat-raised-button class="submit">Submit</button>
+            <button routerLink = "/" mat-raised-button class="cancel">Cancel</button>
           </div>
         </mat-card-content>
       </form>
