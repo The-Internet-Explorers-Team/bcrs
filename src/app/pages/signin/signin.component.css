@@ -1,27 +1,18 @@
-.mat-card-top {
-    margin-top: -10%;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-
-.mat-form-field {
-  width: auto;
-}
 
 .register-link {
-  text-decoration: none;
-  font-weight: 500;
+text-decoration: none;
+font-weight: 500;
 }
 
 .register-link:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 .forgot-password-link {
-  text-decoration: none;
-  font-weight: 500;
+text-decoration: none;
+font-weight: 500;
 }
 
 .forgot-password-link:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
