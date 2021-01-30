@@ -19,7 +19,6 @@ let securityQuestions = mongoose.Schema({
 
 //set up user schema
 let userSchema = mongoose.Schema({
-
   username: {type: String, required: true, unique: true, dropDups: true},
   password: {type: String, required: true},
   firstname: {type: String},
@@ -36,4 +35,3 @@ let userSchema = mongoose.Schema({
 
 //exports schema to MongoDB
 module.exports = mongoose.model('User', userSchema);
-
