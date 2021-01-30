@@ -42,7 +42,7 @@ import {ErrorInterceptor} from './shared/interceptors/error.interceptor';
 import { RegisterComponent } from './pages/register/register.component';
 import { VerifyUsernameFormComponent } from './pages/verify-username-form/verify-username-form.component';
 import { VerifySecurityQuestionsFormComponent } from './pages/verify-security-questions-form/verify-security-questions-form.component';
-import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { ResetPasswordFormComponent } from './pages/reset-password/reset-password.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -70,7 +70,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     RegisterComponent,
     VerifyUsernameFormComponent,
     VerifySecurityQuestionsFormComponent,
-    ResetPasswordComponent,
+    ResetPasswordFormComponent,
     NotFoundComponent,
     ErrorComponent,
     AboutComponent,

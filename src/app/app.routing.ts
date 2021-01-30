@@ -23,7 +23,7 @@ import {SigninComponent} from './pages/signin/signin.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {VerifyUsernameFormComponent} from './pages/verify-username-form/verify-username-form.component';
 import {VerifySecurityQuestionsFormComponent} from './pages/verify-security-questions-form/verify-security-questions-form.component';
-import {ResetPasswordComponent} from './pages/reset-password/reset-password.component';
+import {ResetPasswordFormComponent} from './pages/reset-password/reset-password.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {ErrorComponent} from './pages/error/error.component';
 import {ContactComponent} from './pages/contact/contact.component';
@@ -96,7 +96,7 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'reset-password',
-        component: ResetPasswordComponent
+        component: ResetPasswordFormComponent
       },
       {
         path: '404',
