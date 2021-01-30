@@ -22,7 +22,7 @@ import {AuthLayoutComponent} from './shared/auth-layout/auth-layout.component';
 import {SigninComponent} from './pages/signin/signin.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {VerifyUsernameFormComponent} from './pages/verify-username-form/verify-username-form.component';
-import {VerifySecurityQuestionsComponent} from './pages/verify-security-questions/verify-security-questions.component';
+import {VerifySecurityQuestionsFormComponent} from './pages/verify-security-questions-form/verify-security-questions-form.component';
 import {ResetPasswordComponent} from './pages/reset-password/reset-password.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {ErrorComponent} from './pages/error/error.component';
@@ -92,7 +92,7 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'verify-security-questions',
-        component: VerifySecurityQuestionsComponent
+        component: VerifySecurityQuestionsFormComponent
       },
       {
         path: 'reset-password',

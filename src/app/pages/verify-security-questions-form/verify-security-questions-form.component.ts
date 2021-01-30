@@ -31,6 +31,7 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
 
     this.http.get('/api/users/' + this.username + '/security-questions').subscribe(res => {
       this.selectedSecurityQuestions = res;
+
       console.log(this.selectedSecurityQuestions);
     }, err => {
       console.log(err);
