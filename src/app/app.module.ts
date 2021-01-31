@@ -54,6 +54,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ChartModule } from 'primeng/chart';
 import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
 import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
+import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -80,6 +82,7 @@ import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/
     ContactComponent,
     ServiceRepairComponent,
     InvoiceSummaryDialogComponent,
+    PurchasesByServiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,6 +106,7 @@ import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/
     MatStepperModule,
     MatListModule,
     ChartModule,
+    MatCheckboxModule,
   ],
   providers: [
     CookieService

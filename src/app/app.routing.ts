@@ -29,7 +29,7 @@ import {ErrorComponent} from './pages/error/error.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {AboutComponent} from './pages/about/about.component';
 import {ServiceRepairComponent} from './pages/service-repair/service-repair.component';
-
+import {PurchasesByServiceComponent} from './pages/purchases-by-service/purchases-by-service.component';
 
 export const AppRoutes: Routes = [
   {
@@ -78,6 +78,11 @@ export const AppRoutes: Routes = [
         path: 'service-repair',
         component: ServiceRepairComponent,
         canActivate: [SessionGuard]
+      },
+      {
+        path: 'purchases-by-service',
+        component: PurchasesByServiceComponent,
+        canActivate: [SessionGuard, ]
       },
     ]
   },

@@ -27,7 +27,8 @@
 .about,
 .contact,
 .signin,
-.repair {
+.repair,
+.purchases {
   margin-top: 75px;
 
   padding-left: 20px;
