@@ -1,9 +1,15 @@
-<div fxLayout="column">
-  <router-outlet></router-outlet>
-</div>
-<!--Bob logo-->
-<div class= "top-divider">
-  <img src = "../../../assets/bob1.png">
-</div>
+<div fxLayout = "column">
 
-<div class = "bottom-divider"></div>
+  <!--Bob logo-->
+  <div fxFlex class= "top-divider">
+    <img class = "logo" src = "../../../assets/bob1.png">
+    <h2>Bob's Computer Repair Shop</h2>
+  </div>
+
+  <div class = "content" fxFlex>
+    <router-outlet></router-outlet>
+  </div>
+
+  <div fxFlex class = "bottom-divider"></div>
+
+</div>
