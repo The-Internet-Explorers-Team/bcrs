@@ -1,12 +1,13 @@
 /*
 ============================================
-; Title:  App routing.ts
+; Title:  app.routing.ts
 ; Author: Professor Krasso
 ; Date:  1-22-21
 ; Modified by: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: App routing.ts file
+; Description: App Routing
 ;===========================================
 */
+
 
 import {Routes} from '@angular/router';
 import {BaseLayoutComponent} from './shared/base-layout/base-layout.component';
@@ -21,12 +22,14 @@ import {AuthLayoutComponent} from './shared/auth-layout/auth-layout.component';
 import {SigninComponent} from './pages/signin/signin.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {VerifyUsernameFormComponent} from './pages/verify-username-form/verify-username-form.component';
-import {VerifySecurityQuestionsComponent} from './pages/verify-security-questions/verify-security-questions.component';
-import {ResetPasswordComponent} from './pages/reset-password/reset-password.component';
+import {VerifySecurityQuestionsFormComponent} from './pages/verify-security-questions-form/verify-security-questions-form.component';
+import {ResetPasswordFormComponent} from './pages/reset-password/reset-password.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {ErrorComponent} from './pages/error/error.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {AboutComponent} from './pages/about/about.component';
+import {ServiceRepairComponent} from './pages/service-repair/service-repair.component';
+import {PurchasesByServiceComponent} from './pages/purchases-by-service/purchases-by-service.component';
 
 export const AppRoutes: Routes = [
   {
@@ -47,7 +50,7 @@ export const AppRoutes: Routes = [
         component: AboutComponent
       },
       {
-        path: 'users',
+        path: 'user-list',
         component: UserListComponent,
         canActivate: [SessionGuard]
       },
@@ -71,6 +74,16 @@ export const AppRoutes: Routes = [
         component: SecurityQuestionCreateComponent,
         canActivate: [SessionGuard]
       },
+      {
+        path: 'service-repair',
+        component: ServiceRepairComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'purchases-by-service',
+        component: PurchasesByServiceComponent,
+        canActivate: [SessionGuard, ]
+      },
     ]
   },
   {
@@ -91,11 +104,11 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'verify-security-questions',
-        component: VerifySecurityQuestionsComponent
+        component: VerifySecurityQuestionsFormComponent
       },
       {
         path: 'reset-password',
-        component: ResetPasswordComponent
+        component: ResetPasswordFormComponent
       },
       {
         path: '404',
