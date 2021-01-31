@@ -51,6 +51,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ChartModule } from 'primeng/chart';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 
 
 @NgModule({
@@ -74,7 +77,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     NotFoundComponent,
     ErrorComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ServiceRepairComponent,
+    InvoiceSummaryDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,14 +101,16 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatDividerModule,
     MatSelectModule,
     MatStepperModule,
-    MatListModule
+    MatListModule,
+    ChartModule,
   ],
   providers: [
     CookieService
   ],
   entryComponents: [
     UserDeleteDialogComponent,
-    SecurityQuestionDeleteDialogComponent
+    SecurityQuestionDeleteDialogComponent,
+    InvoiceSummaryDialogComponent,
   ],
   bootstrap: [AppComponent]
 })

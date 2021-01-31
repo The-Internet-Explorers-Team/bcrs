@@ -28,6 +28,8 @@ import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {ErrorComponent} from './pages/error/error.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {AboutComponent} from './pages/about/about.component';
+import {ServiceRepairComponent} from './pages/service-repair/service-repair.component';
+
 
 export const AppRoutes: Routes = [
   {
@@ -70,6 +72,11 @@ export const AppRoutes: Routes = [
       {
         path: 'security-questions/create/new',
         component: SecurityQuestionCreateComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'service-repair',
+        component: ServiceRepairComponent,
         canActivate: [SessionGuard]
       },
     ]
