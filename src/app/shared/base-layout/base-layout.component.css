@@ -26,9 +26,11 @@
 .home,
 .about,
 .contact,
-.signin {
+.signin,
+.repair,
+.purchases {
   margin-top: 75px;
-  margin-left: 20px;
+
   padding-left: 20px;
   color: white;
   text-decoration: none;
@@ -36,7 +38,7 @@
 }
 
 .home {
-  padding-left: 175%;
+  padding-left: 100%;
 }
 
 .manage {

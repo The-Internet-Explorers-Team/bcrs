@@ -55,7 +55,11 @@ import { RoleCreateComponent } from './pages/role-create/role-create.component';
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { RoleListComponent } from './pages/role-list/role-list.component';
 import { RoleDeleteDialogComponent } from './dialogs/role-delete-dialog/role-delete-dialog.component';
-
+import { ChartModule } from 'primeng/chart';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
+import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -82,7 +86,10 @@ import { RoleDeleteDialogComponent } from './dialogs/role-delete-dialog/role-del
     RoleCreateComponent,
     RoleDetailsComponent,
     RoleListComponent,
-    RoleDeleteDialogComponent
+    RoleDeleteDialogComponent,
+    ServiceRepairComponent,
+    InvoiceSummaryDialogComponent,
+    PurchasesByServiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -104,14 +111,17 @@ import { RoleDeleteDialogComponent } from './dialogs/role-delete-dialog/role-del
     MatDividerModule,
     MatSelectModule,
     MatStepperModule,
-    MatListModule
+    MatListModule,
+    ChartModule,
+    MatCheckboxModule,
   ],
   providers: [
     CookieService
   ],
   entryComponents: [
     UserDeleteDialogComponent,
-    SecurityQuestionDeleteDialogComponent
+    SecurityQuestionDeleteDialogComponent,
+    InvoiceSummaryDialogComponent,
   ],
   bootstrap: [AppComponent]
 })

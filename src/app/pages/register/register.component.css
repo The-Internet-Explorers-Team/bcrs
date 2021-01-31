@@ -1,10 +1,15 @@
 mat-list-item{
   margin-bottom: 5%;
-  margin-right: 5%;
+}
+
+.form > mat-list-item{
+  margin-bottom: 10%;
 }
 
 .credentials{
-  display: block;
+  margin-top: 6%;
+  display: flex;
+  flex-direction: row;
 }
 
 mat-card-title{
@@ -17,22 +22,17 @@ mat-card-title{
 mat-card{
   margin: 0 auto;
   width: 55%;
-  margin-top: -5%;
+  margin-top: -10%;
   background-color: #cfd7c7
 }
 
 mat-form-field{
-  width: 425px;
+  width: 100%;
   padding: 2px;
 }
 
 mat-card-content{
   text-align: center;
-}
-
-mat-select{
-  width: 425px;
-  padding: 2px;
 }
 
 .submit{
@@ -64,7 +64,7 @@ mat-select{
 }
 
 .sec-questions{
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .answer{
@@ -80,6 +80,7 @@ mat-select{
   width: 400px;
   height: 40px;
 }
+
 #container{
   text-align: center;
 }
