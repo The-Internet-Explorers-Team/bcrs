@@ -14,13 +14,13 @@
   .bottom-divider{
     background-color: rgb(112, 169, 161);
     z-index: 0;
-    height: 100%;
-    padding-top: 5%;
+    height: 10%;
+    padding-top: 20%;
   }
 
   .logo{
     padding-top: 2%;
-    height: 30%;
+    height: 40%;
     align-items: center;
     padding-bottom: 1%;
   }

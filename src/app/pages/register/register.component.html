@@ -62,7 +62,7 @@
               <mat-label>Password</mat-label>
               <input matInput formControlName = "password" placeholder = "Password">
               <mat-hint>Must include: 1 capital letter, 1 lowercase letter & 1 special character
-              <mat-hint>Minimum length: 8 characters</mat-hint>
+              <mat-hint>Minimum length: 8</mat-hint>
               </mat-hint>
            </mat-form-field>
           </mat-list-item>
@@ -76,12 +76,12 @@
                   <mat-option *ngFor = "let question of securityQuestions" [value] = "question._id">{{question.text}}</mat-option>
                 </mat-select>
             </mat-form-field>
-
             <mat-form-field appearance = "outline">
               <mat-label>Answer</mat-label>
-              <input matInput formControlName = "sq1Answer" placeholder = "Answer">
+              <input matInput formControlName = "answerToSecurityQuestion1" placeholder = "Answer">
             </mat-form-field>
           </mat-list-item>
+
           <mat-list-item>
             <mat-form-field appearance = "outline">
               <mat-label>Select Security Question</mat-label>
@@ -89,12 +89,12 @@
                 <mat-option *ngFor = "let question of securityQuestions" [value] = "question._id">{{question.text}}</mat-option>
               </mat-select>
             </mat-form-field>
-
             <mat-form-field appearance = "outline">
               <mat-label>Answer</mat-label>
-              <input matInput formControlName = "sq2Answer" placeholder = "Answer">
+              <input matInput formControlName = "answerToSecurityQuestion2" placeholder = "Answer">
             </mat-form-field>
           </mat-list-item>
+
           <mat-list-item>
             <mat-form-field appearance = "outline">
               <mat-label>Select Security Question</mat-label>
@@ -102,12 +102,12 @@
                 <mat-option *ngFor = "let question of securityQuestions" [value] = "question._id">{{question.text}}</mat-option>
               </mat-select>
             </mat-form-field>
-
             <mat-form-field appearance = "outline">
               <mat-label>Answer</mat-label>
-              <input matInput formControlName = "sq3Answer" placeholder = "Answer">
+              <input matInput formControlName = "answerToSecurityQuestion3" placeholder = "Answer">
             </mat-form-field>
           </mat-list-item>
+
         </mat-card-content>
         <div id="container">
         <button class="submit" mat-button (click) = "register(registrationForm.value)" type = "submit" [disabled]="!registrationForm.valid"  id="button1" >Submit</button>

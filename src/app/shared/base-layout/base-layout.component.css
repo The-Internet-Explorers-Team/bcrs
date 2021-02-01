@@ -1,56 +1,49 @@
 .logoImg {
-  width: 100x;
-  height: 100px;
+  width: 12%;
+  height: 12%;
   float: left;
-  background-color: rgb(64, 121, 140);
-  padding-top: 15px;
+  background-color: rgb(11,32,39);
+  padding-top: 2%;
 }
 
 .title {
-  font-size: 36px;
-  margin-left: 80px;
-  padding-top: 40px;
-  color: white;
-  letter-spacing: 3px;
-  padding-bottom: 40px;
+  font-size: 180%;
+  padding-left: 13%;
+  padding-top: 5%;
+  color: rgb(112, 169, 161);
+  letter-spacing: 2%;
+  padding-bottom: 3%;
 }
 
 .header {
   width: 100%;
-  height: 175px;
-  background-color: rgb(64, 121, 140);
-  margin-left: -10px;
-  margin-top: -15px;
+  height: 115%;
+  background-color: rgb(11,32,39);
 }
 
-.home,
-.about,
-.contact,
-.signin,
-.repair,
-.purchases {
-  margin-top: 75px;
-
-  padding-left: 20px;
-  color: white;
+a {
+  margin-top: 6%;
+  padding-left: 5%;
+  color: rgb(112, 169, 161);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 100%;
 }
 
 .home {
-  padding-left: 100%;
+  padding-left: 48%;
 }
 
 .manage {
-  padding-left: 30px;
-  -top: 50px;
-  color: white;
+  padding-left: 5%;
+  color:  rgb(112, 169, 161);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 100%;
 }
 
 .main-content {
-  padding-left: 30px;
+  margin-top: 1%;
+  padding-left: 4%;
+  background-color:  rgb(112, 169, 161);
 }
 
 .footer {
