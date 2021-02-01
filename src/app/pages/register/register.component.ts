@@ -49,9 +49,9 @@ export class RegisterComponent implements OnInit {
         securityQuestion1: new FormControl(null, Validators.required),
         securityQuestion2: new FormControl(null, Validators.required),
         securityQuestion3: new FormControl(null, Validators.required),
-        sq1Answer: new FormControl(null, Validators.required),
-        sq2Answer: new FormControl(null, Validators.required),
-        sq3Answer: new FormControl(null, Validators.required),
+        answerToSecurityQuestion1: new FormControl(null, Validators.required),
+        answerToSecurityQuestion2: new FormControl(null, Validators.required),
+        answerToSecurityQuestion3: new FormControl(null, Validators.required),
       }),
       credentials: new FormGroup({
         username: new FormControl(null, Validators.required),
@@ -65,18 +65,18 @@ export class RegisterComponent implements OnInit {
     const securityQuestions = form. securityQuestions;
     const credentials = form.credentials;
 
-    const selectedSQ = [
+    const selectedSecurityQuestions = [
       {
         questionId: securityQuestions.securityQuestion1,
-        answer: securityQuestions.sq1Answer
+        answer: securityQuestions.answerToSecurityQuestion1
       },
       {
         questionId: securityQuestions.securityQuestion2,
-        answer: securityQuestions.sq2Answer
+        answer: securityQuestions.answerToSecurityQuestion2
       },
       {
         questionId: securityQuestions.securityQuestion3,
-        answer: securityQuestions.sq3Answer
+        answer: securityQuestions.answerToSecurityQuestion3
       }
     ];
 
@@ -88,7 +88,7 @@ export class RegisterComponent implements OnInit {
       phoneNumber: contactInfo.phoneNumber,
       address: contactInfo.address,
       email: contactInfo.email,
-      securityQuestions: selectedSQ
+      securityQuestions: selectedSecurityQuestions
     }).subscribe(res => {
       if(res['auth']) {
         this.cookieService.set('isAuthenticated','true', 1);

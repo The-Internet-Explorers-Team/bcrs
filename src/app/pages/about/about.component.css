@@ -1,0 +1,25 @@
+p{
+  font-size: 215%;
+  line-height: 120%;
+  margin: 2%;
+  margin-top: 7%;
+  margin-right: 4%;
+}
+
+img{
+  float: left;
+  height: 25%;
+  width: 25%;
+  display: inline;
+  padding: 1%;
+  margin-bottom: 10%;
+  margin-left: -2%;
+  margin-right: 3%;
+  margin-top: -2%;
+}
+
+.container{
+  background-color:  rgb(112, 169, 161);
+  display: inline;
+}
+
