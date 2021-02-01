@@ -3,7 +3,7 @@
     <mat-card-title>Manage Roles</mat-card-title>
 
     <mat-card-content *ngIf = "roles">
-      <table mat-table [dataSource] = "roles">
+        <table mat-table [dataSource] = "roles">
         <ng-container matColumnDef = "role">
           <th mat-header-cell *matHeaderCellDef>Role</th>
           <td mat-cell *matCellDef = "let element">{{element.text}}</td>
@@ -30,6 +30,8 @@
         <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
         <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
       </table>
+
+      <button mat-raised-button class = "new" routerLink = "/roles/create/new">Create new role</button>
 
     </mat-card-content>
 
