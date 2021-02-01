@@ -17,6 +17,14 @@
           </mat-form-field>
 
           <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['username']" placeholder="Username"/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['password']" placeholder="Password"/>
+          </mat-form-field>
+
+          <mat-form-field>
             <input type="text" matInput [formControl]="form.controls['phoneNumber']"
                    placeholder="Phone number"/>
           </mat-form-field>
@@ -28,6 +36,10 @@
 
           <mat-form-field>
             <input type="text" matInput [formControl]="form.controls['email']" placeholder="Email"/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['role']" placeholder="Role"/>
           </mat-form-field>
         </div>
       </mat-card-content>

@@ -19,7 +19,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class UserDetailsComponent implements OnInit {
   user: any;
-  userId: string;
+  userId: any;
   form: FormGroup;
   roles: any;
 
@@ -33,6 +33,8 @@ export class UserDetailsComponent implements OnInit {
     }, () => {
       this.form.controls.firstname.setValue(this.user.firstname);
       this.form.controls.lastname.setValue(this.user.lastname);
+      this.form.controls.username.setValue(this.user.username);
+      this.form.controls.password.setValue(this.user.password);
       this.form.controls.phoneNumber.setValue(this.user.phoneNumber);
       this.form.controls.address.setValue(this.user.address);
       this.form.controls.email.setValue(this.user.email);
@@ -45,6 +47,8 @@ export class UserDetailsComponent implements OnInit {
     this.form = this.fb.group({
       firstname: [null, Validators.compose([Validators.required])],
       lastname: [null, Validators.compose([Validators.required])],
+      username: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.required, Validators.email])],
@@ -56,11 +60,13 @@ export class UserDetailsComponent implements OnInit {
     this.http.put('/api/users/' + this.userId, {
       firstname: this.form.controls.firstname.value,
       lastname: this.form.controls.lastname.value,
+      username: this.form.controls.username.value,
+      password: this.form.controls.password.value,
       phoneNumber: this.form.controls.phoneNumber.value,
       address: this.form.controls.address.value,
       email: this.form.controls.email.value,
       role: this.form.controls.role.value,
-      date_modified: this.form.controls.role.value
+      date_modified: this.form.controls.date_modified.value
     }).subscribe(res => {
       this.router.navigate(['/user-list']);
     });
