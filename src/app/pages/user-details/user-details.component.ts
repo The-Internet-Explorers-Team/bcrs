@@ -39,7 +39,7 @@ export class UserDetailsComponent implements OnInit {
       this.form.controls.address.setValue(this.user.address);
       this.form.controls.email.setValue(this.user.email);
       this.form.controls.role.setValue(this.user.role);
-      this.form.controls.date_modified.setValue(new Date());
+
     });
   }
 
@@ -66,7 +66,7 @@ export class UserDetailsComponent implements OnInit {
       address: this.form.controls.address.value,
       email: this.form.controls.email.value,
       role: this.form.controls.role.value,
-      date_modified: this.form.controls.date_modified.value
+  
     }).subscribe(res => {
       this.router.navigate(['/user-list']);
     });
