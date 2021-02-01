@@ -32,6 +32,7 @@ import { RoleListComponent } from './pages/role-list/role-list.component';
 import {ServiceRepairComponent} from './pages/service-repair/service-repair.component';
 import {PurchasesByServiceComponent} from './pages/purchases-by-service/purchases-by-service.component';
 import { RoleCreateComponent } from './pages/role-create/role-create.component';
+import {RoleGuard} from './shared/guards/role.guard';
 
 export const AppRoutes: Routes = [
   {
@@ -94,7 +95,7 @@ export const AppRoutes: Routes = [
       {
         path: 'purchases-by-service',
         component: PurchasesByServiceComponent,
-        canActivate: [SessionGuard, ]
+        canActivate: [SessionGuard, RoleGuard]
       },
     ]
   },
