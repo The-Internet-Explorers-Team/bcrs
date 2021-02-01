@@ -5,18 +5,12 @@
   background-color: #cfd7c7;
 }
 
-mat-card-subtitle {
-  font-size: 20px;
-  color: purple;
-  font-weight: 500;
-}
-
 mat-card{
   background-color: #cfd7c7;
 }
 
 .container{
-  margin-top: -20%;
+  margin-top: -22%;
 }
 
 button{

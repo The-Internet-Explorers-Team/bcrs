@@ -22,15 +22,15 @@ mat-card{
 }
 
 mat-toolbar {
-  background-color: #0b2027; 
+  background-color: #0b2027;
   color: #70A9A1;
 }
 
 .submit{
-    
+
   background-color: rgb(11,32,39);
   color: white;
-  border: 3px solid rgb(11,32,39); 
+  border: 3px solid rgb(11,32,39);
   margin-right: 5px;
 }
 
@@ -42,9 +42,14 @@ mat-toolbar {
   background-color: #40798C;
   color: white;
   border: 3px solid  #40798C;
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 .cancel:hover {
   border: 3px solid rgb(11,32,39);
+}
+
+.container{
+  margin-bottom: 5%;
+  background-color: rgb(112, 169, 161);
 }

@@ -4,7 +4,7 @@
 ; Author: Professor Krasso
 ; Date:   17 January 2021
 ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
-; Description: user-detail component 
+; Description: user-detail component
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
@@ -37,6 +37,7 @@ export class UserDetailsComponent implements OnInit {
       this.form.controls.address.setValue(this.user.address);
       this.form.controls.email.setValue(this.user.email);
       this.form.controls.role.setValue(this.user.role);
+      this.form.controls.date_modified.setValue(new Date());
     });
   }
 
@@ -58,13 +59,14 @@ export class UserDetailsComponent implements OnInit {
       phoneNumber: this.form.controls.phoneNumber.value,
       address: this.form.controls.address.value,
       email: this.form.controls.email.value,
-      role: this.form.controls.role.value
+      role: this.form.controls.role.value,
+      date_modified: this.form.controls.role.value
     }).subscribe(res => {
-      this.router.navigate(['/users']);
+      this.router.navigate(['/user-list']);
     });
   }
 
   cancel() {
-    this.router.navigate(['/users']);
+    this.router.navigate(['/user-list']);
   }
 }
