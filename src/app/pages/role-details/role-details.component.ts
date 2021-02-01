@@ -46,7 +46,7 @@ export class RoleDetailsComponent implements OnInit {
     this.http.put('/api/roles/' + this.roleId, {
       text: role
     }).subscribe(res => {
-      this.router.navigate(['/roles']);
+      this.router.navigate(['/role-list']);
     }, err => {
       console.log(err);
     });
