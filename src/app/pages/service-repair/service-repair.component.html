@@ -1,168 +1,161 @@
-
 <!--Services form-->
 <div class="d-flex flex-row bd-highlight mb-2">
-  <div class="p-2 bd-highlight"> 
-<mat-card  class="p-2 bd-highlight" class="mat-elevation-z0" >
-  <form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
-    <mat-card-content>
-      <!-- service repair -->
-      <div fxLayout="column">
-        <h4 fxFlex>Services</h4>
+  <div class="p-2 bd-highlight">
+    <mat-card class="p-2 bd-highlight" class="mat-elevation-z0">
+      <form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
+        <mat-card-content>
+          <!-- service repair -->
+          <div fxLayout="column">
+            <h4 fxFlex>Services</h4>
 
-        <div ngModelGroup="checkGroup" *ngFor="let service of services">
-          <mat-checkbox name="{{service.id}}" ngModel>
-            {{service.title}} ({{service.price | currency}})
-          </mat-checkbox>
-          <br/>
-        </div>
-      </div>
-
-      <br/><br/>
-
-      <br/><br/>
-
-      <!-- parts & labor -->
-      <div fxLayout="column">
-        <h4 fxFlex>Standard Fees</h4>
-        <mat-form-field fxFlex style="width: 300px !important;">
-          <input matInput
-                 name="parts"
-                 ngModel="0"
-                 placeholder="Parts"/>
-        </mat-form-field>
-
-        <mat-form-field fxFlex style="width: 300px !important;">
-          <input matInput
-                 name="labor"
-                 ngModel="0"
-                 placeholder="Labor @ 50.00/hr"/>
-        </mat-form-field>
-      </div>
-    </mat-card-content>
-    <!-- form actions -->
-    <br/><br/>
-
-    <br/><br/>
-    <mat-card-actions align="center">
-      <button mat-raised-button type="reset" color="warn">Cancel</button>
-      <button mat-raised-button color="accent">Submit</button>
-    </mat-card-actions>
-  </form>
-</mat-card>
-</div>
-
-<br /> <br />
-<div class="d-flex flex-row bd-highlight mb-3">  
-  <div class="p-2 bd-highlight">  
-<div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/password.jpg" alt="Card image cap">
-            <div class="card-body" class="test"> 
-              <p class="card-text" class="test">Password Reset ($39.99)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
+            <div ngModelGroup="checkGroup" *ngFor="let service of services">
+              <mat-checkbox name="{{service.id}}" ngModel>
+                {{service.title}} ({{service.price | currency}})
+              </mat-checkbox>
+              <br />
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/spy2.jpg" alt="Card image cap">
-            <div class="card-body" class="test">
-              <p class="card-text" class="test">Spyware Removal ($99.90)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <br /><br />
+          <br /><br />
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/ram2.jpg" alt="Card image cap">
-            <div class="card-body"class="test">
-              <p class="card-text" class="test">RAM Upgrade ($129.99)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <!-- parts & labor -->
+          <div fxLayout="column">
+            <h4 fxFlex>Standard Fees</h4>
+            <mat-form-field fxFlex style="width: 300px !important;">
+              <input matInput name="parts" ngModel="0" placeholder="Parts" />
+            </mat-form-field>
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/install2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Software Installation (49.99)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
+            <mat-form-field fxFlex style="width: 300px !important;">
+              <input matInput name="labor" ngModel="0" placeholder="Labor @ 50.00/hr" />
+            </mat-form-field>
           </div>
-        </div>
+        </mat-card-content>
+        <!-- form actions -->
+        <br /><br />
 
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/tune2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">PC Tune-up ($89.99)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/keyboard2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Keyboard Cleaning ($45.00)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="password" src="../../../assets/clean2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Disk Clean-up ($149.99)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br /> <br /> <br />
-        </div>
-</div>
-</div>
+        <br /><br />
+        <mat-card-actions align="center">
+          <button mat-raised-button type="reset" color="warn">Cancel</button>
+          <button mat-raised-button color="accent">Submit</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
   </div>
-</div>
+
+  <br /> <br />
+  <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 bd-highlight">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/password.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">Password Reset ($39.99)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" >Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/spy2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">Spyware Removal ($99.90)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/ram2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">RAM Upgrade ($129.99)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/install2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">Software Installation (49.99)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/tune2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">PC Tune-up ($89.99)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/keyboard2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">Keyboard Cleaning ($45.00)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="password" src="../../../assets/clean2.jpg" alt="Card image cap">
+              <div class="card-body" class="test">
+                <p class="card-text" class="test">Disk Clean-up ($149.99)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br /> <br /> <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 

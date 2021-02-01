@@ -15,8 +15,6 @@ import {MatDialog} from '@angular/material/dialog';
 import {CookieService} from 'ngx-cookie-service';
 import {HttpClient} from '@angular/common/http';
 
-import Swal from 'sweetalert2'
-
 @Component({
   selector: 'app-service-repair',
   templateUrl: './service-repair.component.html',
@@ -122,7 +120,4 @@ export class ServiceRepairComponent implements OnInit {
     });
   }
 }
-
-
-
 
