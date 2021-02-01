@@ -2,3 +2,10 @@ h1{
   font-size: 250%;
   margin-top: 2%;
 }
+
+.pie{
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
