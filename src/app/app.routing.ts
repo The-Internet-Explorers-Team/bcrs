@@ -33,6 +33,7 @@ import {ServiceRepairComponent} from './pages/service-repair/service-repair.comp
 import {PurchasesByServiceComponent} from './pages/purchases-by-service/purchases-by-service.component';
 import { RoleCreateComponent } from './pages/role-create/role-create.component';
 import {RoleGuard} from './shared/guards/role.guard';
+import {RoleDetailsComponent} from './pages/role-details/role-details.component';
 
 export const AppRoutes: Routes = [
   {
@@ -96,6 +97,11 @@ export const AppRoutes: Routes = [
         path: 'purchases-by-service',
         component: PurchasesByServiceComponent,
         canActivate: [SessionGuard, RoleGuard]
+      },
+      {
+        path: 'roles/:roleId',
+        component: RoleDetailsComponent,
+        canActivate: [SessionGuard]
       },
     ]
   },

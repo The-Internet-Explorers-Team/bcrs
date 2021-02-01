@@ -62,6 +62,7 @@ import { PurchasesByServiceComponent } from './pages/purchases-by-service/purcha
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
