@@ -60,6 +60,7 @@ import { ServiceRepairComponent } from './pages/service-repair/service-repair.co
 import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatListModule,
     ChartModule,
     MatCheckboxModule,
+    NgbModule,
   ],
   providers: [
     CookieService
