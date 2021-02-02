@@ -1,0 +1,26 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start" class = "container">
+  <div fxFlex.gt-sm="55" fxFlex="100">
+    <mat-card style="width: 80%;" class="mat-card-top pa-0">
+      <mat-card-title style="text-align: center; font-size: 250%;"
+                      class="mat-headline">Verify User
+      </mat-card-title>
+      <br/> <br/>
+
+      <form [formGroup]="form" (ngSubmit)="validateUsername()" #usernameForm>
+        <mat-card-content fxLayout="column">
+          <mat-form-field fxFlex>
+            <input matInput
+                   [formControl]="form.controls['username']"
+                   placeholder="User name"/>
+          </mat-form-field>
+
+          <br/><br/>
+          <div fxFlex fxLayoutAlign="end">
+            <button mat-raised-button class="submit">Submit</button>
+            <button routerLink = "/session/signin" mat-raised-button class="cancel">Cancel</button>
+          </div>
+        </mat-card-content>
+      </form>
+    </mat-card>
+  </div>
+</div>

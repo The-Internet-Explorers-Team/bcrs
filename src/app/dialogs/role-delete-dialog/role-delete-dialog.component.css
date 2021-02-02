@@ -1,0 +1,14 @@
+.delete{
+  background-color: rgb(112, 23, 23);
+  color: white;
+}
+
+.keep{
+  background-color: rgb(11,32,39);
+  color: white;
+}
+
+h2{
+  font-size: 200%;
+  text-align: center;
+}

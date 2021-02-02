@@ -1,6 +1,21 @@
-//requires mongoose and security question schema
+/*
+============================================
+; Title:  user.js
+; Author: Professor Krasso
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Date:   January 13, 2021
+; Description: Model for MongoDB Users collection
+;===========================================
+*/
+
+//this section is the requirements for mongoose
 const mongoose = require('mongoose');
-const securityQuestions = require('securityQuestions')
+
+//security questions Schema
+let securityQuestions = mongoose.Schema({
+  questionId:   {type: String},
+  answer:       {type: String}
+});
 
 //set up user schema
 let userSchema = mongoose.Schema({

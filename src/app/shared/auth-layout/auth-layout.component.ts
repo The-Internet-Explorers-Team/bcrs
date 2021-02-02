@@ -1,3 +1,14 @@
+/*
+============================================
+; Title:  auth-layout.ts
+; Author: Professor Krasso
+; Date:   17 January 2021
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Description: auth-layout component 
+;===========================================
+*/
+
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +20,7 @@ export class AuthLayoutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

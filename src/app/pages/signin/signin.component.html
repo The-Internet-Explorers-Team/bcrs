@@ -1,0 +1,45 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex.gt-sm="55" fxFlex="100" style="margin-top: -17vh;">
+    <mat-card class="mat-card-top pa-0"><br />
+      <mat-card-title style="text-align: center; font-size: 250%;"
+                      class="mat-headline">User Sign-In
+      </mat-card-title>
+      <br/>
+      <mat-card-subtitle style="text-align: center; font-weight: lighter">
+        <a style="color: #40798c;" routerLink="/session/register" class="register-link">or create an account</a>
+      </mat-card-subtitle>
+
+      <br/>
+      <mat-card-subtitle style="text-align: center;" class="mat-headline">You must enter a valid
+        username and password to proceed
+      </mat-card-subtitle>
+
+      <mat-card-content>
+        <!-- if there is an error message -->
+        <small style="color: red;" *ngIf="errorMessage">{{ errorMessage }}<br/></small>
+        <mat-card class="mat-elevation-z0">
+          <form [formGroup]="form" (ngSubmit)="signin(); form.reset()" #loginForm="ngForm">
+            <mat-card-content fxLayout="column" fxLayoutGap="2%">
+              <mat-form-field>
+                <input type="text" matInput fxFlex [formControl]="form.controls['username']"
+                       placeholder="Username"/>
+              </mat-form-field>
+              <mat-form-field>
+                <input type="password" matInput fxFlex [formControl]="form.controls['password']"
+                       placeholder="Password"/>
+              </mat-form-field>
+            </mat-card-content>
+          <br /><br />
+            <a fxLayoutAlign="center" class="forgot-password-link" routerLink="/session/forgot" style="color: #40798c;">Forgot
+              password?</a>
+              <br />
+            <mat-card-actions>
+              <button class="submit" type="submit" fxFlex mat-raised-button style="background-color: #0b2027; color: white">Submit</button>
+            </mat-card-actions>
+            <br/>
+          </form>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.top-divider{
+    background-color: rgb(11,32,39);
+    height: 20%;
+    z-index: 0;
+    text-align: center;
+    color: #70A9A1;
+  }
+
+  .content{
+    background-color: rgb(112, 169, 161);
+    padding-top: -2%;
+  }
+
+  .bottom-divider{
+    background-color: rgb(112, 169, 161);
+    z-index: 0;
+    height: 10%;
+    padding-top: 20%;
+  }
+
+  .logo{
+    padding-top: 2%;
+    height: 40%;
+    align-items: center;
+    padding-bottom: 1%;
+  }
+
+  h2{
+    font-size: 200%;
+    text-align: center;
+  }
