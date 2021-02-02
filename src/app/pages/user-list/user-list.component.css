@@ -1,7 +1,7 @@
 .header {
   margin: 0 auto;
-  font-size: 34px;
-  padding: 20px;
+  font-size: 250%;
+  padding: 1%;
 }
 
 .user-card{
@@ -9,30 +9,32 @@
   margin: 0 auto;
   margin-bottom: 2%;
   margin-left: 10%;
-  border: black 1px solid;
-  box-shadow: outset 10px;
+  box-shadow: outset 1%;
+  background-color: #cfd7c7;
 }
 
 .info1{
   padding-left: 21%;
-  font-size: 16px;
+  font-size: 120%;
+  width: 90%;
   margin-top: -15%;
   position: block;
   float: left;
 }
 
+
 .info2{
-  padding-left: 800px;
-  font-size: 16px;
+  padding-left: 60%;
+  font-size: 120%;
   margin-top: -15%;
-  position: block;
   float: left;
+  padding-bottom: 4%;
 }
 
 .Security{
-  font-size: 16px;
+  font-size: 120%;
   padding-left: 21%;
-  margin-top: -5%;
+  margin-top: -6%;
   padding-bottom: 3%;
 }
 
@@ -44,4 +46,12 @@
 
 button{
   float: right;
+}
+
+.info1 > p{
+  padding-bottom: 3%;
+}
+
+.info2 > p{
+  line-height: 250%;
 }

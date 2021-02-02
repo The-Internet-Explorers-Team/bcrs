@@ -17,6 +17,14 @@
           </mat-form-field>
 
           <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['username']" placeholder="Username"/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['password']" placeholder="Password"/>
+          </mat-form-field>
+
+          <mat-form-field>
             <input type="text" matInput [formControl]="form.controls['phoneNumber']"
                    placeholder="Phone number"/>
           </mat-form-field>
@@ -29,15 +37,18 @@
           <mat-form-field>
             <input type="text" matInput [formControl]="form.controls['email']" placeholder="Email"/>
           </mat-form-field>
+
+          <mat-form-field>
+            <input type = "text" matInput [formControl]="form.controls['role']" placeholder="Role"/>
+          </mat-form-field>
         </div>
       </mat-card-content>
 
       <br/>
       <mat-card-actions align="end">
-        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
-        <button mat-raised-button color="accent">Submit</button>
+        <button mat-raised-button class = "cancel" (click)="cancel()" color="warn">Cancel</button>
+        <button mat-raised-button class = "submit" color="accent">Submit</button>
       </mat-card-actions>
     </form>
   </mat-card>
 </div>
--->

@@ -1,57 +1,62 @@
+mat-list-item{
+  margin-bottom: 5%;
+}
+
+.form > mat-list-item{
+  margin-bottom: 10%;
+}
+
+.credentials{
+  margin-top: 6%;
+  display: flex;
+  flex-direction: row;
+}
+
 mat-card-title{
   text-align: center;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  font-size: 30px;
+  padding-bottom: 2%;
+  padding-top: 1%;
+  font-size: 250%;
 }
 
 mat-card{
   margin: 0 auto;
   width: 55%;
-  margin-top: 15%;
+  margin-top: -10%;
   background-color: #cfd7c7
 }
 
 mat-form-field{
-  width: 425px;
-  padding: 2px;
+  width: 100%;
+  padding: 1%;
 }
 
 mat-card-content{
   text-align: center;
 }
 
-mat-form-field {
-  text-align: center;
-}
-
-mat-select{
-  width: 425px;
-  padding: 2px;
-}
-
 .submit{
   width: 100%;
   background-color: rgb(11,32,39);
   color: white;
-  border: 3px solid rgb(11,32,39); 
-  margin-right: 5px;
+  border: 1% solid rgb(11,32,39);
+  margin-right: 1%;
 }
 
 .submit:hover {
-  border: 3px solid #40798C;
+  border: 1% solid #40798C;
 }
 
 .cancel{
   width: 100%;
   background-color: #40798C;
   color: white;
-  border: 3px solid  #40798C;
-  margin-left: 5px; 
+  border: 1% solid  #40798C;
+  margin-left: 1%;
 }
 
 .cancel:hover {
-  border: 3px solid rgb(11,32,39);
+  border: 1% solid rgb(11,32,39);
 }
 
 .form{
@@ -59,7 +64,7 @@ mat-select{
 }
 
 .sec-questions{
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .answer{
@@ -67,14 +72,16 @@ mat-select{
 }
 
 #button1{
-  width: 400px;
-  height: 40px;
+  width: 45%;
+  height: 15%;
   color: white;
 }
+
 #button2{
-  width: 400px;
-  height: 40px;
+  width: 45%;
+  height: 15%;
 }
+
 #container{
   text-align: center;
 }

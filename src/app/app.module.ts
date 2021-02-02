@@ -51,11 +51,16 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { RoleCreateComponent } from './pages/role-create/role-create.component';
+import { RoleDetailsComponent } from './pages/role-details/role-details.component';
+import { RoleListComponent } from './pages/role-list/role-list.component';
+import { RoleDeleteDialogComponent } from './dialogs/role-delete-dialog/role-delete-dialog.component';
 import { ChartModule } from 'primeng/chart';
 import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
 import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -80,6 +85,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ErrorComponent,
     AboutComponent,
     ContactComponent,
+    RoleCreateComponent,
+    RoleDetailsComponent,
+    RoleListComponent,
+    RoleDeleteDialogComponent,
     ServiceRepairComponent,
     InvoiceSummaryDialogComponent,
     PurchasesByServiceComponent,
@@ -107,6 +116,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatListModule,
     ChartModule,
     MatCheckboxModule,
+    NgbModule,
   ],
   providers: [
     CookieService

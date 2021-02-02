@@ -6,7 +6,10 @@
       <mat-card *ngFor = "let User of users" class = "mat-elevation-z12 user-card">
         <mat-card-title>{{User.firstname + " " + User.lastname}}
           <mat-card-content>
-            <button mat-icon-button routerLink = "/user-details">
+            <button mat-icon-button (click) = "delete(User._id, User.username)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button routerLink = "/users/{{User._id}}">
               <mat-icon>edit</mat-icon>
             </button>
             <!--User pic-->
@@ -14,7 +17,6 @@
             <mat-card-subtitle class = "ID">Role: {{User.role}}</mat-card-subtitle>
             <div class = "info1">
               <p>Username: {{User.username}}</p>
-              <p>Password: {{User.password}}</p>
               <p>Phone Number: {{User.phoneNumber}}</p>
               <p>Address: {{User.address}}</p>
             </div>
@@ -24,8 +26,6 @@
               <p>Date Created: {{User.date_created}}</p>
               <p>Date Modified: {{User.date_modified}}</p>
             </div>
-            <p class = "Security">Security Questions: {{User.securityQuestions}}</p>
-
 
           </mat-card-content>
         </mat-card-title>

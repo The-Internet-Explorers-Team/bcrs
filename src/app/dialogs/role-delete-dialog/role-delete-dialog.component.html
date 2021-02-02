@@ -1,0 +1,11 @@
+<div class = "content">
+  <h2 mat-dialog-title>Please Confirm Deletion</h2>
+
+  <div mat-dialog-content>
+    <p>Are you sure you want to remove the {{role}} role from the system?</p>
+  </div>
+  <div mat-dialog-actions align = "end">
+    <button class = "keep" mat-raised-button matDialogClose = "cancel">Keep {{role}}</button>
+    <button class = "delete" mat-raised-button matDialogClose = "confirm">Delete {{role}}</button>
+  </div>
+</div>

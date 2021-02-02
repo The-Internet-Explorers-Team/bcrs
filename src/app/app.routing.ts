@@ -28,8 +28,12 @@ import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {ErrorComponent} from './pages/error/error.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {AboutComponent} from './pages/about/about.component';
+import { RoleListComponent } from './pages/role-list/role-list.component';
 import {ServiceRepairComponent} from './pages/service-repair/service-repair.component';
 import {PurchasesByServiceComponent} from './pages/purchases-by-service/purchases-by-service.component';
+import { RoleCreateComponent } from './pages/role-create/role-create.component';
+import {RoleGuard} from './shared/guards/role.guard';
+import {RoleDetailsComponent} from './pages/role-details/role-details.component';
 
 export const AppRoutes: Routes = [
   {
@@ -75,6 +79,16 @@ export const AppRoutes: Routes = [
         canActivate: [SessionGuard]
       },
       {
+        path: 'role-list',
+        component: RoleListComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'roles/create/new',
+        component: RoleCreateComponent,
+        canActivate: [SessionGuard]
+      },
+      {
         path: 'service-repair',
         component: ServiceRepairComponent,
         canActivate: [SessionGuard]
@@ -82,7 +96,12 @@ export const AppRoutes: Routes = [
       {
         path: 'purchases-by-service',
         component: PurchasesByServiceComponent,
-        canActivate: [SessionGuard, ]
+        canActivate: [SessionGuard, RoleGuard]
+      },
+      {
+        path: 'roles/:roleId',
+        component: RoleDetailsComponent,
+        canActivate: [SessionGuard]
       },
     ]
   },
