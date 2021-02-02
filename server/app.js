@@ -68,6 +68,6 @@ app.use('/api/invoices', InvoiceApi);
 /**
  * Create and start server
  */
-http.createServer(app).listen(port, function() {
-  console.log(`Application started and listening on port: ${port}`)
-}); // end http create server function
+http.createServer(app).listen(PORT, function() {
+  console.log(`Application started and listening on port: ${PORT}`)
+});
