@@ -2,7 +2,8 @@
 ============================================
 ; Title:  invoice-summary-dialog.component.ts
 ; Author: Professor Krasso
-; Date:   3 December 2019
+; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
+; Date:   20 January 2021
 ; Description: Material dialog for the Invoice Summary dialog
 ;===========================================
 */

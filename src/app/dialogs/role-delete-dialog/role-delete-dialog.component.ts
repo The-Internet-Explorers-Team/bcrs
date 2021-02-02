@@ -2,8 +2,8 @@
  * ================================================================================
  * Title: role-delete-dialog.component.ts
  * Author: Professor Krasso
- * Date: 1/29/21
- * Modified by: Rochelle Markham, Rebecca Buechle, Rhonda Rivas, King Major
+ ; Date:   20 January 2021
+ ; Modified By: Becca Buechle, Rochelle Markham, Rhonda Rivas, King Major
  * Description: modifies user roles for BCRS
  * ================================================================================
  */
