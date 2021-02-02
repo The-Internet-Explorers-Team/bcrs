@@ -35,7 +35,7 @@ export class RoleCreateComponent implements OnInit {
     this.http.post('/api/roles', {
       text: role
     }).subscribe(res => {
-      this.router.navigate(['/roles']);
+      this.router.navigate(['/role-list']);
     }, err => {
       console.log(err);
     });
