@@ -30,3 +30,8 @@ mat-card{
 .cancel:hover {
   border: 1% solid rgb(11,32,39);
 }
+
+.secQ {
+  margin-bottom: 4%;
+
+}
